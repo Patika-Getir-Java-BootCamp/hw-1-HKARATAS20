@@ -1,41 +1,60 @@
 Q1-Why we need to use OOP? Some major OOP languages?
-A1
+A1 OOP is useful in modeling the real world through objects with attributes. It provides an easy to understand view of complex systems.
+  Also provides some important principles such as ;  Inheritance, Polymorphism, Encapsulation, Abstraction.
+  Major OOP languages are ; Java,C#,C++ etc. 
 
 Q2- Interface vs Abstract class?
-A2
+A2 To simply explain Abstract classes define what a class is and Interfaces define what a class can do.
+  Some key differences are one class can only inherit from one abstract class  but can implement multiple interfaces. 
+  Classes can have properties while interfaces can only have function signatures.
 
 Q3-Why we need equals and hashcode? When to override?
-A3
+A3 When comparing two objects equals compares if they have the same memory location. Hashcode does a similar thing and returns a unique number for each instance.
+  We want to override them if we want to determine the equivalence of two instances as something other than their memory location. 
+  For example if two instances have the same amount property we want them to be equal. Then we should override equals and hashcode to reflect this.
 
 Q4- Diamond problem in Java? How to fix it?
-A4
+A4 Java only allows for a class to inherit from (extend) one class. This problem can be fixed with Interfaces.
+  One class can implement multiple interfaces.
 
-Q5 - Why we need Garbagge Collector ? How does it run ?
-A5
+Q5 - Why we need Garbage Collector ? How does it run ?
+A5 Garbage collector takes care of the freeing of the memory of a java program. Heap memory doesnt get automatically 
+  deallocated that is why the garbage collector searches through the memory and frees the parts that are unreachable by our code. (no references point there)
 
 Q6 - Java 'static' keyword usage?
-A6
+A6 static keyword is used to label members of a class. It makes the members be able to used without an instance object of that class.
+  It is used mostly with constants or functions that doesnt require an object like MATH library functions.
+
 
 Q7 - Immutability means? Where, How and Why to use it ?
-A7
+A7 Immutability refers to something being unchangeable. It can refer to a specific property or a whole class and means whatever this is cannot be changed after its initialization. 
 
 Q8 - Composition and Aggregation means and differences?
-A8
+A8 Composition refers to relations between classes that cannot exist without one another an example is a room and a house. Both concepts are meaningless on their own.
+  Aggregation is a relationshio where one class may have many instances related to it but both classes may also live independently from the other class. One example is 
+  a library and a book. A library may have any number of books and a book can exist and funciton normally outside of a library.
 
 Q9 - Cohesion and Coupling means and differences ?
-A9
+A9  Cohesion and coupling are used to indicate the level of relationship between classes inside a system. Coupling between classes is generally not good
+  if there is high coupling we should reconsider the design of the system maybe unify some classes. Cohesion is usually inversely related to coupling
+  if there is high cohesion it is generally a good system with low coupling between classes and good internal representation.
 
 Q10 - Heap and Stack means and differences ?
-A10
+A10 Heap memory is used to stored complex objects that may persist after the execution of the function is done. It is dynamically allocated and slower to acces and write than stack.
+  Stack is used for local variables and calculations. Cannot be dynamically allocated(might overflow). Faster than heap but doesnt persist after program finishes.
 
 Q11 - Exception means ? Type of Exceptions ?
-A11
+A11 Exception is when some error occurs in our program. We want to handle any of these exceptions via try catch structures if possible.
+  There are many types of exceptions like ; arrayIndexOutOfBoundsException, nullPointerException. All these are unexpected conditions that my occur during execution.
 
 Q12 - How to summarize 'clean code' as short as possible?
-A12
+A12 Clean code is code that is understandable by anyone. Puts readability in front of cleverness. Refrains from using clever and unreadable one liners.
 
 Q13 - What is the method of hiding in Java ?
-A13
+A13 Using protected or the private keyword we can hide the members of a class from the outside.
 
 Q14 - What is the difference between abstraction and polymorphism in Java ?
-A14
+A14 Abstraction is the principle of hiding implementation details from the outside.
+  Where the user of the class doesnt need to know how the internal data and functionality.
+  And polymorphism is when we can have different implementations for the same function in different child classes of a base class.
+  We can treat objects of subclasses as their parent class and call their functions without explicitly referencing the child classes.
